@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The RAG System is a command-line tool designed to perform Retrieval Augmented Generation using OpenAI's GPT-4 model. It allows users to embed text from various file formats, store embeddings in a SQLite database, and generate answers to queries by retrieving relevant information from the embedded data.
+The RAG CPP System is a command-line tool designed to perform Retrieval Augmented Generation using OpenAI's GPT-4 model. It allows users to embed text from various file formats, store embeddings in a SQLite database, and generate answers to queries by retrieving relevant information from the embedded data.
 
 The system supports:
 
@@ -21,7 +21,7 @@ The system supports:
 - **Support for Various File Formats**:
   - Text files (`.txt`)
   - PDF files (`.pdf`)
-  - Image files (`.png`, `.jpg`, `.jpeg`, `.bmp`) with OCR support.
+  - Image files (`.png`, `.jpg`, `.jpeg`, `.bmp`) with OCR support. (Under developing)
 
 ## System Requirements
 
@@ -41,8 +41,8 @@ The system supports:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/rag_system.git
-cd rag_system
+git clone https://github.com/yourusername/ragcpp.git
+cd ragcpp
 ```
 
 ### 2. Install Dependencies
@@ -70,7 +70,7 @@ Restart your terminal or IDE to ensure the environment variable is recognized.
 
 ### Using Visual Studio
 
-1. **Open the Solution**: Open the `rag_system.sln` file in Visual Studio.
+1. **Open the Solution**: Open the `ragcpp.sln` file in Visual Studio.
 2. **Configure Project Settings**:
    - **Character Set**: Set to **Use Unicode Character Set**.
    - **C++ Standard**: Ensure C++17 is enabled.
@@ -85,7 +85,7 @@ Restart your terminal or IDE to ensure the environment variable is recognized.
 The RAG System is a command-line tool that accepts various options:
 
 ```bash
-rag_system.exe [options]
+ragcpp.exe [options]
 ```
 
 ### Command-Line Options
@@ -115,7 +115,7 @@ rag_system.exe [options]
 To embed multiple files and directories:
 
 ```bash
-rag_system.exe --embed documents\file1.txt images\ image2.jpg
+ragcpp.exe --embed documents\file1.txt images\ image2.jpg
 ```
 
 This command will:
@@ -129,12 +129,12 @@ This command will:
 To generate an answer based on the embedded data:
 
 ```bash
-rag_system.exe --query "中国的首都是哪里？"
+ragcpp.exe --query "美國的首都是哪裡？"
 ```
 
 This command will:
 
-- Use the question "中国的首都是哪里？" (What is the capital of China?) to query the database.
+- Use the question "美國的首都是哪裡？" (What is the capital of USA?) to query the database.
 - Retrieve relevant information from the embedded data.
 - Generate an answer using GPT-4 with proper citations.
 
@@ -143,7 +143,7 @@ This command will:
 To delete documents by their IDs:
 
 ```bash
-rag_system.exe --delete 1 2 3
+ragcpp.exe --delete 1 2 3
 ```
 
 This command will delete documents with IDs 1, 2, and 3 from the database.
@@ -153,7 +153,7 @@ This command will delete documents with IDs 1, 2, and 3 from the database.
 To list all existing documents in the database:
 
 ```bash
-rag_system.exe --list
+ragcpp.exe --list
 ```
 
 This command will display all documents with their IDs and file names.
@@ -163,7 +163,7 @@ This command will display all documents with their IDs and file names.
 To monitor the progress of the embedding process:
 
 ```bash
-rag_system.exe --monitor
+ragcpp.exe --monitor
 ```
 
 This command will display real-time updates of the embedding process, showing the progress for each document being embedded.
@@ -233,8 +233,8 @@ RAG 系統是一個命令列工具，設計用於使用 OpenAI 的 GPT-4 模型�
 ### 1. 克隆倉庫
 
 ```bash
-git clone https://github.com/yourusername/rag_system.git
-cd rag_system
+git clone https://github.com/yourusername/ragcpp.git
+cd ragcpp
 ```
 
 ### 2. 安裝依賴
@@ -262,7 +262,7 @@ setx OPENAI_API_KEY "your_openai_api_key"
 
 ### 使用 Visual Studio
 
-1. **打開解決方案**：在 Visual Studio 中打開 `rag_system.sln` 文件。
+1. **打開解決方案**：在 Visual Studio 中打開 `ragcpp.sln` 文件。
 2. **配置項目設置**：
    - **字符集**：設置為 **使用 Unicode 字符集**。
    - **C++ 標準**：確保啟用了 C++17。
@@ -277,7 +277,7 @@ setx OPENAI_API_KEY "your_openai_api_key"
 RAG 系統是一個命令列工具，接受各種選項：
 
 ```bash
-rag_system.exe [options]
+ragcpp.exe [options]
 ```
 
 ### 命令列選項
@@ -307,7 +307,7 @@ rag_system.exe [options]
 要嵌入多個文件和目錄：
 
 ```bash
-rag_system.exe --embed documents\file1.txt images\ image2.jpg
+ragcpp.exe --embed documents\file1.txt images\ image2.jpg
 ```
 
 此命令將：
@@ -321,12 +321,12 @@ rag_system.exe --embed documents\file1.txt images\ image2.jpg
 要基於嵌入的數據生成答案：
 
 ```bash
-rag_system.exe --query "中國的首都是哪裡？"
+ragcpp.exe --query "美國的首都是哪裡？"
 ```
 
 此命令將：
 
-- 使用問題「中國的首都是哪裡？」來查詢資料庫。
+- 使用問題「美國的首都是哪裡？」來查詢資料庫。
 - 從嵌入的數據中檢索相關資訊。
 - 使用 GPT-4 生成帶有正確引用的答案。
 
@@ -335,7 +335,7 @@ rag_system.exe --query "中國的首都是哪裡？"
 要根據 ID 刪除文檔：
 
 ```bash
-rag_system.exe --delete 1 2 3
+ragcpp.exe --delete 1 2 3
 ```
 
 此命令將從資料庫中刪除 ID 為 1、2 和 3 的文檔。
@@ -345,7 +345,7 @@ rag_system.exe --delete 1 2 3
 要列出資料庫中所有現有的文檔：
 
 ```bash
-rag_system.exe --list
+ragcpp.exe --list
 ```
 
 此命令將顯示所有文檔及其 ID 和文件名。
@@ -355,7 +355,7 @@ rag_system.exe --list
 要監控嵌入過程的進度：
 
 ```bash
-rag_system.exe --monitor
+ragcpp.exe --monitor
 ```
 
 此命令將實時顯示嵌入過程的更新，顯示每個正在嵌入的文檔的進度。
