@@ -1,0 +1,40 @@
+# Exclude object files
+*.obj
+
+# Exclude executable files
+*.exe
+
+# Exclude folders
+.vs/
+.build/
+
+# Dependency libraries
+/third_party/*
+
+# Runtime data
+/data/embeddings.db
+
+# Build artifacts
+/build/
+*.obj
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.idb
+
+# Visual Studio files
+*.suo
+*.user
+*.vcxproj.user
+ipch/
+*.pch
+*.log
+
+# MacOS
+.DS_Store
+
+# Unix
+*.o
+*.so
