@@ -8,9 +8,6 @@
 .vs/
 .build/
 
-# Dependency libraries
-/third_party/*
-
 # Runtime data
 /data/embeddings.db
 
